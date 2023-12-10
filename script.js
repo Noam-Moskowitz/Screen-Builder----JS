@@ -4,9 +4,9 @@ const submitBtn = document.getElementById('submit')
 let selected = screen
 
 screen.addEventListener("click", (event) => {
-    let border = `1px solid rgb(190, 2, 118)`
+    selected.classList.remove('selected')
     selected = event.target;
-    selected.style.border = border
+    selected.classList.add('selected')
     console.log(selected);
 })
 submitBtn.addEventListener("click", (event) => {
@@ -55,5 +55,7 @@ submitBtn.addEventListener("click", (event) => {
     item.style.border = `${element.borderSize} ${element.borderStyle} ${element.borderColor}`;
     item.style.borderRadius = element.borderRadius;
     selected.appendChild(item);
+
+    selected=screen;
     event.target.form.reset();
 })
