@@ -14,6 +14,10 @@
             <div id="screen"></div>
         </div>
         <div class="toolkit">
+            <div class="top-button-container">
+                <button class="topBtn" id="export">חלץ</button>
+                <button class="topBtn" id="clear">נקה</button>
+            </div>
             <div class="toolkit-text">
                 <h1>בונה מסכים</h1>
                 <p>לורם איםסום דולר שמולר מולר גיכינן</p>
@@ -37,6 +41,10 @@
                             <label for="backgroundColor">צבע רקע</label>
                             <input type="text" id="backgroundColor" name="backgroundColor">
                         </div>
+                        <div id="source" class="displayNone">
+                            <label for="src">Source</label>
+                            <input type="text" id="src" name="src">
+                        </div>
                         <div class="input-container">
                             <label for="content">תוכן</label>
                             <textarea name="content" id="content" cols="30" rows="5"></textarea>
@@ -50,6 +58,14 @@
                             <div class="input-container">
                                 <label for="fSize">גודל הגופן</label>
                                 <input type="text" name="fSize" id="fSize">
+                            </div>
+                            <div class="input-container">
+                                <label for="textAlign">Text-Align</label>
+                                <input type="text" name="textAlign" id="textAlign">
+                            </div>
+                            <div class="input-container">
+                                <label for="textDecoration">Text-Decoration</label>
+                                <input type="text" name="textDecoration" id="textDecoration">
                             </div>
                             <div class="input-container">
                                 <label for="fFamily">סוג גופן</label>
@@ -98,9 +114,20 @@
                                 <input type="alignItems" name="alignItems" id="alignItems">
                             </div>
                             <div class="input-container">
-                                <label for="justifyContent">Justify-Content</label>
-                                <input type="justifyContent" name="justifyContent" id="justifyContent">
-                            </div>
+                                <label for="justifyContent">Justify-Content</label><select name="justifyContent"
+                                    id="justifyContent" class="select">
+                                    <option value="Justify-Content" placeholder disabled selected>---בחר/י---
+                                    </option>
+                                    <option value="center">center</option>
+                                    <option value="end">end</option>
+                                    <option value="start">start</option>
+                                    <option value="left">left</option>
+                                    <option value="right">right</option>
+                                    <option value="space-around">space-around</option>
+                                    <option value="space-between">space-between</option>
+                                    <option value="space-evenly">space-evenly</option>
+                                    <option value="stretch">stretch</option>
+                                </select>
                         </details>
                         <details class="details">
                             <summary>עיצוב</summary>
@@ -124,8 +151,10 @@
                     </div>
                     <div class="button-container">
                         <input type="submit" value="הוסף" class="btn" id="submit">
+                        <button type="button" id="delete" class="btn">מחק</button>
                     </div>
                 </form>
+
             </div>
         </div>
     </div>

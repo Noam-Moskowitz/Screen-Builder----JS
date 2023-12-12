@@ -39,6 +39,26 @@
     opacity: .9;
 }
 
+.top-button-container {
+    width: 100%;
+    display: flex;
+}
+
+.topBtn {
+    font-size: 1rem;
+    background-color: rgb(190, 2, 118);
+    border: none;
+    border-radius: 0px 0px 8px 8px;
+    padding: 5px 10px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.topBtn:hover {
+    cursor: pointer;
+    background-color: rgb(180, 91, 146);
+}
+
 .toolkit-text {
     text-align: right;
     width: 100%;
@@ -58,7 +78,7 @@ h1 {
 
 .form-content {
     overflow-y: scroll;
-    height: 70vh;
+    height: 65vh;
 }
 
 .details {
@@ -96,7 +116,7 @@ h1 {
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .btn {
@@ -109,8 +129,13 @@ h1 {
 
 .btn:hover {
     cursor: pointer;
-    opacity: .8;
+    background-color: rgb(180, 91, 146);
 }
-.selected{
+
+.selected {
     border: 3px solid rgb(190, 2, 118);
+}
+
+.displayNone {
+    display: none;
 }
