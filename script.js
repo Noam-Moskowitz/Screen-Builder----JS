@@ -3,7 +3,12 @@ const designForm = document.getElementById('designForm');
 const submitBtn = document.getElementById('submit');
 const deleteBtn = document.getElementById('delete');
 const elementInput = document.getElementById('elementType');
+const clearBtn = document.getElementById('clear');
+const exportBtn = document.getElementById('export');
+const confirmBtn = document.getElementById('confirm');
+const cancelBtn = document.getElementById('cancel');
 let selected = screen
+
 
 elementInput.addEventListener('keyup', (event) => {
     const source = document.getElementById('source');
@@ -28,6 +33,20 @@ deleteBtn.addEventListener("click", () => {
         selected = screen;
     }
 });
+
+confirmBtn.addEventListener("click", () => {
+    screen.innerHTML = '';
+    document.querySelector('.confirm-window').style.display = 'none';
+})
+
+cancelBtn.addEventListener("click", () => {
+    document.querySelector('.confirm-window').style.display = 'none';
+})
+
+clearBtn.addEventListener("click", () => {
+    document.querySelector('.confirm-window').style.display = 'block';
+})
+
 submitBtn.addEventListener("click", (event) => {
     event.preventDefault();
 
