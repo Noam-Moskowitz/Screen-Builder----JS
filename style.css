@@ -56,6 +56,7 @@
     padding: 5px 10px;
     font-weight: bold;
     margin-right: 15px;
+    color: black;
 }
 
 .topBtn:hover {
@@ -129,6 +130,7 @@ h1 {
     font-weight: bold;
     background-color: rgb(190, 2, 118);
     border: none;
+    color: black;
 }
 
 .btn:hover {

@@ -47,6 +47,43 @@ clearBtn.addEventListener("click", () => {
     document.querySelector('.confirm-window').style.display = 'block';
 })
 
+exportBtn.addEventListener("click", () => {
+    const fileName = prompt('שמור קובץ בשם:', '');
+    const htmlContent = `
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            direction: rtl;
+        }
+    </style>
+    <title>${fileName}</title>
+</head>
+
+<body>
+${screen.innerHTML}
+</body>
+
+</html>
+    `
+    const exportedFile = new Blob([`\ufeff${htmlContent}`], { type: `text/html;charset=utf-8` });
+    const url = window.URL.createObjectURL(exportedFile);
+    const a = document.createElement('a');
+    a.style.display = 'none'
+    a.href = url
+    a.download = `${fileName}.html`;
+    console.log(a.download);
+    a.click();
+});
+
+
 submitBtn.addEventListener("click", (event) => {
     event.preventDefault();
 
